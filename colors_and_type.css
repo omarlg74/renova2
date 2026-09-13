@@ -1,0 +1,263 @@
+/* ============================================================
+   Renova2 — Foundations: Color & Type
+   ============================================================
+   Inspired by the brand mark: deep architectural navy linework
+   on a sky-mist gradient with brass-gold accents. The palette
+   reads "legal firm × premium real estate × modern atelier".
+   ------------------------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ---------- Brand core ---------- */
+  --r2-ink:          #0E1622;   /* near-black, slight blue cast — primary text */
+  --r2-navy:         #1B2A41;   /* deep architectural navy — logo linework */
+  --r2-navy-soft:    #2B3D58;   /* one step up for secondary surfaces */
+  --r2-graphite:     #4A5468;   /* muted body grey, fully legible on bone */
+  --r2-slate:        #7A8497;   /* mid grey for meta / labels */
+  --r2-mist:         #C7D2E0;   /* pale slate, borders, dividers */
+  --r2-sky:          #B9C9DC;   /* the soft blue from the logo background */
+  --r2-sky-pale:     #E4ECF5;   /* upper edge of the brand gradient */
+  --r2-bone:         #F4F1EA;   /* warm off-white, primary "paper" */
+  --r2-bone-soft:    #FAF8F3;   /* cooler, paler bone for surfaces */
+  --r2-white:        #FFFFFF;
+
+  /* ---------- Accents ---------- */
+  --r2-brass:        #B4892E;   /* primary gold accent (RENOVA2 wordmark) */
+  --r2-brass-deep:   #8E6A1F;   /* hover/pressed for brass */
+  --r2-brass-soft:   #E7D9B0;   /* tint, used for backgrounds & highlights */
+  --r2-forest:       #1F3A2E;   /* elegant deep green — secondary accent */
+  --r2-forest-soft:  #4F6A5E;
+
+  /* ---------- Semantic (status) ---------- */
+  --r2-success:      #2F6F4B;
+  --r2-warning:      #B07D1A;
+  --r2-danger:       #8E2A2A;
+  --r2-info:         #2B4D77;
+
+  /* ---------- Foreground / Background ---------- */
+  --fg-1:            var(--r2-ink);        /* headlines */
+  --fg-2:            var(--r2-graphite);   /* body */
+  --fg-3:            var(--r2-slate);      /* meta */
+  --fg-on-dark:      var(--r2-bone-soft);
+  --fg-accent:       var(--r2-brass);
+
+  --bg-page:         var(--r2-bone);
+  --bg-surface:      var(--r2-white);
+  --bg-surface-2:    var(--r2-bone-soft);
+  --bg-inverse:      var(--r2-navy);
+  --bg-inverse-2:    var(--r2-ink);
+
+  --border-1:        rgba(27, 42, 65, 0.10);   /* hairline */
+  --border-2:        rgba(27, 42, 65, 0.18);   /* stronger */
+  --border-strong:   var(--r2-navy);
+
+  /* ---------- Signature gradient (from logo) ---------- */
+  --r2-gradient-sky: linear-gradient(180deg, #E4ECF5 0%, #B9C9DC 100%); /* @kind color */
+  --r2-gradient-ink: linear-gradient(180deg, #1B2A41 0%, #0E1622 100%); /* @kind color */
+  --r2-gradient-brass: linear-gradient(135deg, #D9B970 0%, #B4892E 45%, #8E6A1F 100%); /* @kind color */
+
+  /* ---------- Typography stacks ---------- */
+  --font-sans:       "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display:    "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif:      "Cormorant Garamond", "Times New Roman", Georgia, serif;
+  --font-mono:       "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  /* ---------- Type scale (modular ~1.25) ---------- */
+  --fs-12:  0.75rem;
+  --fs-13:  0.8125rem;
+  --fs-14:  0.875rem;
+  --fs-15:  0.9375rem;
+  --fs-16:  1rem;
+  --fs-18:  1.125rem;
+  --fs-20:  1.25rem;
+  --fs-24:  1.5rem;
+  --fs-30:  1.875rem;
+  --fs-36:  2.25rem;
+  --fs-48:  3rem;
+  --fs-60:  3.75rem;
+  --fs-72:  4.5rem;
+  --fs-96:  6rem;
+
+  /* Letter spacing */
+  --tracking-tight:    -0.02em;
+  --tracking-snug:     -0.01em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.04em;
+  --tracking-wider:    0.12em;   /* eyebrow labels — "DESPACHO LEGAL" */
+  --tracking-widest:   0.22em;   /* logo-style all-caps tagline */
+
+  /* Line height */
+  --lh-tight:   1.05; /* @kind font */
+  --lh-snug:    1.2;  /* @kind font */
+  --lh-base:    1.55; /* @kind font */
+  --lh-relaxed: 1.7;  /* @kind font */
+
+  /* Weight */
+  --fw-extralight: 200; /* @kind font */
+  --fw-light:      300; /* @kind font */
+  --fw-regular:    400; /* @kind font */
+  --fw-medium:     500; /* @kind font */
+  --fw-semibold:   600; /* @kind font */
+  --fw-bold:       700; /* @kind font */
+  --fw-black:      800; /* @kind font */
+
+  /* ---------- Spacing scale (4px base) ---------- */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ---------- Radii — sparing, architectural ---------- */
+  --radius-0:    0px;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   10px;
+  --radius-xl:   16px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadows — soft, never colored ---------- */
+  --shadow-1: 0 1px 2px rgba(14, 22, 34, 0.04), 0 1px 1px rgba(14, 22, 34, 0.03);
+  --shadow-2: 0 2px 8px rgba(14, 22, 34, 0.06), 0 1px 2px rgba(14, 22, 34, 0.04);
+  --shadow-3: 0 12px 32px rgba(14, 22, 34, 0.08), 0 2px 6px rgba(14, 22, 34, 0.04);
+  --shadow-4: 0 28px 60px rgba(14, 22, 34, 0.14), 0 6px 16px rgba(14, 22, 34, 0.06);
+  --shadow-inset: inset 0 0 0 1px rgba(27, 42, 65, 0.08);
+
+  /* ---------- Motion ---------- */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast:   140ms; /* @kind other */
+  --dur-base:   220ms; /* @kind other */
+  --dur-slow:   420ms; /* @kind other */
+
+  /* ---------- Layout ---------- */
+  --container-narrow: 720px;
+  --container-base:   1080px;
+  --container-wide:   1280px;
+  --container-xl:     1440px;
+}
+
+/* ============================================================
+   Semantic typography classes
+   ============================================================ */
+
+html { font-family: var(--font-sans); color: var(--fg-1); background: var(--bg-page); }
+
+/* Eyebrow / label — wide tracked all-caps, used above titles */
+.r2-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--r2-brass);
+}
+
+/* Display — used for hero headlines, light weight, tight tracking */
+.r2-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-extralight);
+  font-size: clamp(var(--fs-48), 6vw, var(--fs-96));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+
+/* Serif italic accent — for pull quotes & "transformamos" moments */
+.r2-serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  color: var(--fg-1);
+}
+
+h1, .r2-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-light);
+  font-size: clamp(var(--fs-36), 4.2vw, var(--fs-60));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+h2, .r2-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-light);
+  font-size: clamp(var(--fs-30), 3.2vw, var(--fs-48));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  margin: 0;
+}
+h3, .r2-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-24);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg-1);
+  margin: 0;
+}
+h4, .r2-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-18);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  margin: 0;
+}
+
+p, .r2-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: var(--lh-base);
+  color: var(--fg-2);
+  margin: 0;
+  text-wrap: pretty;
+}
+.r2-body-lg {
+  font-size: var(--fs-18);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+.r2-body-sm {
+  font-size: var(--fs-14);
+  line-height: var(--lh-base);
+  color: var(--fg-2);
+}
+.r2-meta {
+  font-size: var(--fs-13);
+  color: var(--fg-3);
+  letter-spacing: var(--tracking-wide);
+}
+
+.r2-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  letter-spacing: 0;
+}
+
+/* Wordmark-style — for "RENOVA2" style all-caps moments */
+.r2-wordmark {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  background: var(--r2-gradient-brass);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
+}

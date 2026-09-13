@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo Renova2 — Casas y terrenos en venta y renta</title>
+<meta name="description" content="Catálogo de casas, terrenos y departamentos en venta y renta. Renova2 — soluciones jurídicas, rehabilitación y venta de inmuebles.">
+<meta property="og:title" content="Catálogo Renova2 — Casas y terrenos">
+<meta property="og:description" content="Propiedades en venta y renta con documentación clara. Pregunta por WhatsApp.">
+<meta property="og:image" content="fotos/paso-ladrillo-01.jpg">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <img class="top-logo" src="fotos/logo.jpg" alt="Renova2">
+    <div class="top-txt">
+      <span class="top-name">Renova2</span>
+      <span class="top-sub">Catálogo de inmuebles</span>
+    </div>
+    <a class="top-cta" href="#" data-wa-general target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm4.52 12.15c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.98-.14.16-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.17 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.47-.28Z"/></svg>
+      Escríbenos
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <span class="hero-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M3 32 L3 14 L17 8 L17 32 Z" stroke="#1B2A41" stroke-width="1"></path><path d="M14 32 L14 6 L21 6 L21 32 Z" stroke="#1B2A41" stroke-width="1"></path><path d="M21 32 L21 18 L33 12 L33 32 Z" stroke="#1B2A41" stroke-width="1"></path><rect x="16.5" y="20" width="3" height="6" stroke="#B4892E" stroke-width="1.2"></rect><path d="M28 32 L28 16" stroke="#B4892E" stroke-width="1.2"></path></svg></span>
+    <h1>Casas y terrenos<br>listos para <em>habitarse</em></h1>
+    <p>Propiedades en venta y renta con documentación revisada y colindancias definidas. Cada ficha la preparamos con el respaldo jurídico de Renova2.</p>
+    <div class="hero-meta">
+      <span class="pill">Escrituras y colindancias verificadas</span>
+      <span class="pill">Atención directa por WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<section class="filters">
+  <div class="wrap filters-in">
+    <div class="f-row">
+      <div class="seg" role="group" aria-label="Operación">
+        <button type="button" data-op="Todas" aria-pressed="true">Todas</button>
+        <button type="button" data-op="Venta" aria-pressed="false">Venta</button>
+        <button type="button" data-op="Renta" aria-pressed="false">Renta</button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        <input id="f-q" type="search" placeholder="Buscar por colonia, ciudad o palabra clave" aria-label="Buscar">
+      </label>
+    </div>
+    <div class="f-row">
+      <span class="sel"><select id="f-tipo" aria-label="Tipo de propiedad"></select></span>
+      <span class="sel"><select id="f-ciudad" aria-label="Ciudad"></select></span>
+      <button type="button" id="f-clear" class="f-clear">Limpiar filtros</button>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="results">
+    <div>
+      <div class="eyebrow">Catálogo · Septiembre 2026</div>
+      <h2 class="results-title">Propiedades disponibles</h2>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="ask-sec">
+  <div class="wrap ask-in">
+    <div>
+      <div class="eyebrow">Búsqueda por encargo</div>
+      <h2>¿Buscas algo que<br>no está <em>en el catálogo</em>?</h2>
+      <p>Dinos qué necesitas y lo buscamos. Trabajamos inmuebles con hipoteca, casas sin adeudo en asociación y terrenos en zonas de crecimiento alrededor de Xalapa.</p>
+      <p class="note" style="margin-top:16px">Al enviar, se abre WhatsApp con tu solicitud ya escrita. No guardamos ningún dato en esta página.</p>
+    </div>
+    <form class="form" id="ask-form">
+      <div class="field">
+        <label for="nombre">Tu nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre y apellido">
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="busco">Qué buscas</label>
+          <select id="busco" name="busco">
+            <option>Terreno</option>
+            <option>Casa</option>
+            <option>Departamento</option>
+            <option>Local o bodega</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="operacion">Operación</label>
+          <select id="operacion" name="operacion">
+            <option>venta</option>
+            <option>renta</option>
+          </select>
+        </div>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="zona">Zona o ciudad</label>
+          <input id="zona" name="zona" type="text" placeholder="Xalapa, Coatepec…">
+        </div>
+        <div class="field">
+          <label for="presupuesto">Presupuesto</label>
+          <input id="presupuesto" name="presupuesto" type="text" placeholder="$ aproximado">
+        </div>
+      </div>
+      <div class="field">
+        <label for="detalles">Detalles</label>
+        <textarea id="detalles" name="detalles" placeholder="Recámaras, si necesitas crédito, plazos…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm4.52 12.15c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.98-.14.16-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.17 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.47-.28Z"/></svg>
+        Enviar solicitud por WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="tel" data-tel href="#">228 108 8773</a>
+      <p style="margin-top:6px">Renova2 · Soluciones jurídicas, rehabilitación y venta de inmuebles</p>
+    </div>
+    <p><a href="../Aviso de Privacidad.html">Aviso de privacidad</a></p>
+  </div>
+</footer>
+
+<a class="fab" href="#" data-wa-general target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm4.52 12.15c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.98-.14.16-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.17 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.47-.28Z"/></svg>
+  WhatsApp
+</a>
+
+<script src="propiedades.js"></script>
+<script src="catalogo.js"></script>
+</body>
+</html>
