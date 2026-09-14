@@ -46,7 +46,7 @@
 
   function photo(p, i) {
     if (!p.fotos || !p.fotos.length) return '<div class="ph-empty">Foto próximamente</div>';
-    return '<img src="catalogo/fotos/' + p.fotos[i] + '" alt="' + p.titulo + '" loading="lazy">';
+    return '<img src="fotos/' + p.fotos[i] + '" alt="' + p.titulo + '" loading="lazy">';
   }
 
   function card(p, feat) {
@@ -58,7 +58,7 @@
     if (p.fotos && p.fotos.length > 1) {
       h += '<div class="thumbs">';
       p.fotos.forEach(function (f, i) {
-        h += '<button type="button" data-thumb="' + i + '" aria-pressed="' + (i === idx) + '" aria-label="Foto ' + (i + 1) + '"><img src="catalogo/fotos/' + f + '" alt="" loading="lazy"></button>';
+        h += '<button type="button" data-thumb="' + i + '" aria-pressed="' + (i === idx) + '" aria-label="Foto ' + (i + 1) + '"><img src="fotos/' + f + '" alt="" loading="lazy"></button>';
       });
       h += '</div>';
     }
